@@ -8,9 +8,8 @@ var isPalindrome = function(x) {
     let rev = 0;
 while(temp!==0){
    rem = temp%10;
-   rev = rev*10+rem
-   temp = Math.floor(temp/10); 
+   rev = rev*10+rem;
+   temp = Math.floor(temp/10);
 }
-return rev === x
-
+return rev === x;
 };
