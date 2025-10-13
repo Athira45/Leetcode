@@ -7,8 +7,6 @@ var getConcatenation = function(nums) {
     for(let num of nums){
         ans.push(num)
     }
-    for(let num of nums){
-        ans.push(num)
-    }
+    ans = ans.concat(nums)
     return ans;
 };
