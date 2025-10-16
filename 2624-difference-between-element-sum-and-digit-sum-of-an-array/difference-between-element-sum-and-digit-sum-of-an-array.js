@@ -5,14 +5,21 @@
 var differenceOfSum = function(nums) {
   let elementSum = 0
 let digitSum=0
-for(let num of nums){
-  elementSum+=num;
-  while(num){
- let digit = num%10
- digitSum+=digit;
- num = Math.floor(num/10);
-  } 
-}
 
+for(let num of nums){
+    let len = num.toString().length
+    elementSum+=num;
+    if(len>1){
+      temp =num;
+  while(temp){
+ let digit = temp%10
+ digitSum+=digit;
+ temp = Math.floor(temp/10);
+  } 
+    }else{
+      digitSum+=num  
+    }
+  
+}
    return elementSum-digitSum
 };
