@@ -8,11 +8,12 @@ let digitSum=0
 for(let num of nums){
   elementSum+=num;
   temp =num;
-  while(temp){
- let digit = temp%10
+  while(num){
+ let digit = num%10
  digitSum+=digit;
- temp = Math.floor(temp/10);
+ num = Math.floor(num/10);
   } 
 }
-   return Math.abs(elementSum-digitSum)
+
+   return elementSum-digitSum
 };
