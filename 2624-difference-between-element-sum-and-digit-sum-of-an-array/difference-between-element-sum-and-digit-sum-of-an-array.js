@@ -7,6 +7,7 @@ var differenceOfSum = function(nums) {
 let digitSum=0
 for(let num of nums){
   elementSum+=num;
+  temp =num;
   while(num){
  let digit = num%10
  digitSum+=digit;
