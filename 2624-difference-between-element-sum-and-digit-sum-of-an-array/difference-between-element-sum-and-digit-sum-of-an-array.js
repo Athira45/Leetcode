@@ -10,10 +10,11 @@ for(let num of nums){
     let len = num.toString().length
     elementSum+=num;
     if(len>1){
-  while(num){
- let digit = num%10
+      temp =num;
+  while(temp){
+ let digit = temp%10
  digitSum+=digit;
- num = Math.floor(num/10);
+ temp = Math.floor(temp/10);
   } 
     }else{
       digitSum+=num  
