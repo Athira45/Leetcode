@@ -4,8 +4,8 @@
  */
 var finalValueAfterOperations = function(operations) {
     let num=0;
-    for(let opr of operations){
-         if(opr.includes("+")){
+    for(let i=0; i<operations.length; i++){
+         if(operations[i] == "++X" || operations[i] == "X++" ){
             num++;
          }
           else {
