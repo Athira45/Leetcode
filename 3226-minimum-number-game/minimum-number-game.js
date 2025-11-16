@@ -3,14 +3,14 @@
  * @return {number[]}
  */
 var numberGame = function(nums) {
-   nums.sort((a, b) => a - b); 
-
+    nums.sort((a, b) => a - b);   
     let arr = [];
-    for (let i = 0; i < nums.length; i += 2) {
-        let alice = nums[i];       
-        let bob = nums[i + 1];     
-        arr.push(bob);             
-        arr.push(alice);          
+
+    while (nums.length > 0) {
+        let alice = nums.shift();  
+        let bob = nums.shift(); 
+        arr.push(bob);
+        arr.push(alice);
     }
 
     return arr;
