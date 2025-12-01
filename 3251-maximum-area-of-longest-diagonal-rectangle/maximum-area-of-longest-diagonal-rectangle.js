@@ -8,10 +8,16 @@ var areaOfMaxDiagonal = function(dimensions) {
     for(let [L,W] of dimensions ){
          let diag = (L*L) + (W*W )
          let area = L*W;
-         if( maxDiag<diag|| (diag === maxDiag && maxArea<area)){
+
+      if(maxDiag<diag){
+        maxDiag = diag;
+        maxArea = area;
+      }else if(diag === maxDiag){
+         if( maxArea<area){
             maxArea = area;
-            maxDiag = diag
          }
     }
+    }
+
     return maxArea;
 };
